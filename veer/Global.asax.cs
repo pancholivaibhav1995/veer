@@ -23,7 +23,12 @@ namespace veer
             {
                 bundles.Add(new ScriptBundle("~/GlobalJs.js")
                      .Include("~/Scripts/jquery-3.5.1.min.js")
+                      .Include("~/Scripts/Home.js")
                         );
+
+                bundles.Add(new ScriptBundle("~/Homejs.js")
+                    .Include("~/Scripts/Home.js")
+                      );
             }
         }
     }
