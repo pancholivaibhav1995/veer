@@ -3,17 +3,231 @@
     ViewBag.Title = "Home";
     Layout = "~/Views/_LayoutMasterPage.cshtml";
 }
-
-<h2>Home</h2>
-
-
-
-
-
+@System.Web.Optimization.Styles.Render("~/Home.css")
 @System.Web.Optimization.Scripts.Render("~/Homejs.js")
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Start Bootstrap</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">
+                        Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <header>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <!-- Slide One - Set the background image for this slide in the line below -->
+                <div class="carousel-item active" style="background-image: url('https://source.unsplash.com/LAaSoL0LrYs/1920x1080')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2 class="display-4">First Slide</h2>
+                        <p class="lead">This is a description for the first slide.</p>
+                    </div>
+                </div>
+                <!-- Slide Two - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('https://source.unsplash.com/bF2vsubyHcQ/1920x1080')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2 class="display-4">Second Slide</h2>
+                        <p class="lead">This is a description for the second slide.</p>
+                    </div>
+                </div>
+                <!-- Slide Three - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('https://source.unsplash.com/szFUQoyvrxM/1920x1080')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2 class="display-4">Third Slide</h2>
+                        <p class="lead">This is a description for the third slide.</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </header>
+
+<!-- Page Content -->
+@*<section class="py-5">
+    <div class="container">
+        <h1 class="display-4">Full Page Image Slider</h1>
+        <p class="lead">The background images for the slider are set directly in the HTML using inline CSS. The images in this snippet are from <a href="https://unsplash.com">Unsplash</a>, taken by <a href="">Joanna Kosinska</a>!</p>
+    </div>
+</section>*@
+<div class="counter">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="employees">
+                    <p class="" style="margin-top: 118px;">Our</p>
+                    <p class="employee-p">Portfolio</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="employees">
+                    <p class="counter-count">879</p>
+                    <p class="employee-p">Happy Customer</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="customer">
+                    <p class="counter-count">954</p>
+                    <p class="customer-p">Insurance Policies</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="design">
+                    <p class="counter-count">1050</p>
+                    <p class="design-p">Years Experience</p>
+                </div>
+            </div>          
+        </div>
+    </div>
+</div>
+<div class="container-contact100">
+    <div class="wrap-contact100">
+        <form class="contact100-form validate-form">
+            <span class="contact100-form-title">
+                Send Us A Message
+            </span>
+
+            <label class="label-input100" for="first-name">Tell us your name *</label>
+            <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Type first name">
+                <input id="first-name" class="input100" type="text" name="first-name" placeholder="First name">
+                <span class="focus-input100"></span>
+            </div>
+            <div class="wrap-input100 rs2-wrap-input100 validate-input" data-validate="Type last name">
+                <input class="input100" type="text" name="last-name" placeholder="Last name">
+                <span class="focus-input100"></span>
+            </div>
+
+            <label class="label-input100" for="email">Enter your email *</label>
+            <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                <input id="email" class="input100" type="text" name="email" placeholder="Eg. example@email.com">
+                <span class="focus-input100"></span>
+            </div>
+
+            <label class="label-input100" for="phone">Enter phone number</label>
+            <div class="wrap-input100">
+                <input id="phone" class="input100" type="text" name="phone" placeholder="Eg. +1 800 000000">
+                <span class="focus-input100"></span>
+            </div>
+
+            <label class="label-input100" for="message">Message *</label>
+            <div class="wrap-input100 validate-input" data-validate="Message is required">
+                <textarea id="message" class="input100" name="message" placeholder="Write us a message"></textarea>
+                <span class="focus-input100"></span>
+            </div>
+
+            <div class="container-contact100-form-btn">
+                <button class="contact100-form-btn">
+                    Send Message
+                </button>
+            </div>
+        </form>
+
+        <div class="contact100-more flex-col-c-m" style="background-image: url('images/bg-01.jpg');">
+            <div class="flex-w size1 p-b-47">
+                <div class="txt1 p-r-25">
+                    <span class="lnr lnr-map-marker"></span>
+                </div>
+
+                <div class="flex-col size2">
+                    <span class="txt1 p-b-20">
+                        Address
+                    </span>
+
+                    <span class="txt2">
+                        Mada Center 8th floor, 379 Hudson St, New York, NY 10018 US
+                    </span>
+                </div>
+            </div>
+
+            <div class="dis-flex size1 p-b-47">
+                <div class="txt1 p-r-25">
+                    <span class="lnr lnr-phone-handset"></span>
+                </div>
+
+                <div class="flex-col size2">
+                    <span class="txt1 p-b-20">
+                        Lets Talk
+                    </span>
+
+                    <span class="txt3">
+                        +1 800 1236879
+                    </span>
+                </div>
+            </div>
+
+            <div class="dis-flex size1 p-b-47">
+                <div class="txt1 p-r-25">
+                    <span class="lnr lnr-envelope"></span>
+                </div>
+
+                <div class="flex-col size2">
+                    <span class="txt1 p-b-20">
+                        General Support
+                    </span>
+
+                    <span class="txt3">
+                        contact@example.com
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="dropDownSelect1"></div>
+
 <script>
-    $(document).ready(function () {
+    $(document).ready(function () {             
         _vbVeer.init();
+
+       
+
+    });
+    $('.counter-count').each(function () {
+        $(this).prop('Counter', 0).animate({
+            Counter: $(this).text()
+        }, {
+            duration: 5000,
+            easing: 'swing',
+            step: function (now) {
+                $(this).text(Math.ceil(now));
+            }
+        });
     });
 </script>
 
